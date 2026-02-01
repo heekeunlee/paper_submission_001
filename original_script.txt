@@ -1,0 +1,76 @@
+High-Brightness Micro-LED Dual View Display for Automotive Application
+
+(Abstract) This paper presents the development and characterization of a high-brightness dual view display based on Micro-LED technology, designed for automotive application. A 2.1-inch prototype panel was fabricated, featuring an RGB stripe pixel structure (320x390 pixels, 326ppi) with odd/even pixel column domain separation for driver and passenger views, each delivering 163ppi resolution and 1200 nit luminance. The panel achieves wide viewing cones(40-45degree per view), low crosstalk(<2%), and excellent environmental stability(-30도씨 to +85도씨, <2% degradation after 168h at 85%RH/85도씨). Cmpared to OLED-based dual view displays, the Micro-LED panel demonstrates superior luminance retention under high APL conditions, enhanced viewing angle control without color shift, and immunity to burn-in, making it a strong candidate for next-generation automotive human-machine interfaces(HMIs).
+
+
+1. Introduction
+In addition to the current Micro-LED pixel domain separation approach, prior work such as BOE's "The Research of Automotive Dual View Diplay Techniques" provides valuable insights into LCD and OLED implementations. BOE's study categorized dual-view techniques into optical separation methods (e.g., parallax barrier, lenticular lens, polarization separation) and signal-based approaches, highlighting limitations such as luminance loss, reduced resolution, and restricted viewing angles. These constraints are particularly critical under automotive envirmental conditions (temperature, humidity, vibration), which this study addresses through robust Micro-LED design.
+Dual View display technology enables the simultaneous presentation of different visual content to the driver and passenger, enhancing infotainment and safety fuctionalities in automotive environments. Current implementations using OLED panels face limitations in luminance, burn-in risk, and environmental stability. Micro-LED technology offers an alternative, with inherent advantages in brightness, efficiency, and  longevity. This work investigates a spatial pixels, partitioning approach for Micro-LED dual view panels, detailing the design, fabrication, and characterization of a 2.1-inch prototype panel meeting automotive-grade specifications.
+In this work, the driver-facing display located directly behind the steering wheel is referred to as the Front Information Display(FID). The passenger-facing display intergrated into the dashboard area is defined as the Public Information Display (PID), which provides infortainment or auxiliary content without interfering with the driver`s view.  When a center-mounted touch or control screen is used to serve both occupants, it is referred to as the Central Information Display(CID). The proposed dual-view Micro-LED panel concept is primarily intended for the PID, enabling differentiated content delivery between the FID and PID while maintaining strict viewing cone separation to minimize crosstalk.
+
+2. Experimental
+2.1-inch RGB stripe Micro-LED panel(320x390 pixels, 326ppi) was fabricated using chip transfer and alignment processes optimized for domain separation. Odd-numbered pixel columns were assigned to the driver`s view(right viewing cone). The Micro-LED chips measured R: 15x30um, G/B: 13x28um. The target luminance was set at 1200nit per view, with a viewing angle of 40-45 degree for each domain at maximum output. Optical, electrical, and environmental tests were conducted following automotive-grade display standard.
+
+3. Result
+In the proposed dual-view Micro-LED display using a parallax barrier principle, the key optical parameters can be described using the following equation.
+
+The viewing angle(ceta) is determined by the aperture width(a) of the barrier or pixel domain and the distance(d) between the barrier and the emission surface:
+
+ceta = arctan(a/2d).   (1)
+
+where:
+a = barrier aperture or pixel aperture width
+d = distance between barrier and emission surface
+
+Crosstalk(CT) represents the ratio of unintended luminance to the intended luminance in the designated viewing zone
+
+CT(%) = (L_leak/L_target) x 100     (2)
+
+where:
+L_leak = measured luminance in the unintended viewing direction
+L_target = measured luminance in the intended viewing direction
+
+The luminance efficiency(L_eff.) within the designed viewing angle is given by:
+
+L_eff. = L_view/L_max.    (3)
+
+where:
+L_view = luminance within the target viewing angle
+L_max = maximum luminance of the light-emitting element
+
+These formulas provide a basis for optimizing aperture size, barrier-pixel distance, and minimizing crosstalk while maximizing luminance efficiency under automotive environmental conditions.
+The dual-view Micro-LED display was designed with a pixel-level optical separation structure using a single uLED per sub-pixel. Horizontal RGB sub-pixels were grouped in pairs, with the first group assigned to the left view and the second to the right view. The separation between views was achieved through a combination of single-step Bank and two-step black matrix(BM) layers. For the left view, the right portion of each RGB sub-pixel aperture was blocked; for the right view, the left portion was blocked, thereby controlling the emission cone for each view.
+
+   3.1. Simulation Result
+Optical simulations were performed by varying (1) BM1 position and RGB sub-pixel aperture width, (2) organic coating (OC) thickness, and (3) BM2 position and aperture width. Fixed parameters included RGB uLED dimensions, emission profiles, and the complete panel stack design. The trget horizontal viewing angle for each view was 45-60 degree. Due to the lager size of the red emitter, an additional +4um offset was applied to BM1 for the red sub-pixels.
+When BM1 was positioned +8um from the Bank edge, with a 6um OC, and BM2 offset by +3.5um, the simulated luminance profile matched the target angles. Increasing OC thickness to 10um or 14um resulted in crosstalk inversion between left and right views. Simulations assumed 100% light absorption by BM/Bank, with no reflection.
+
+    3.2. Fabrication results
+The fabricated sample, designed under the optimal conditions identified in the simulation, was fabricated and evaluated to validate the proposed approach.
+
+- Sample(simulation-optimized): BM1 offset +8um, OC 6um, BM2 offset +3.5um.
+
+EZ Contrast measurements were performed for white(255G) and individual RGB primaries.
+Maximum luminance per view was ~1000 nits with calibrated gamma settings.
+
+   3.3. Viewing profile and crosstalk
+Measurement data were normalized in luminance(y-axis) versus horizontal angle from -90 degree(x-axis). The optimized BM1/BM2 configuration produced distinct left/right viewing cones with minimal overlap, meeting the target viewing range. Crosstalk behavior matched simulation trend, with degradation observed when OC exceeded 10um.
+
+   3.4. Process verification
+Automated optical inspection(AOI) images were captured at three stages: after uLED bonding, after Bank fabrication accurate alignment and structural integrity of the optical barriers..
+
+
+4. Disscusion
+Compared to BOE`s LCD/OLED-based dual view implementations, the Micro-LED approach demonstrated in this work achives superior luminance retention and reduced crosstalk across the target viewing cone. BOE`s methodology for measuring delta u`v`, crosstalk percentage, and viewing cone boundaries was referenced to standardize performance evaluation. Futhermore, environmental testing conditions eqivalent to or more stringent than BOE`s(e.g.,85도씨/85%RH, thermal shock) were applied, confirming the automotive suitability of the Micro-LED design. From a production standpoint, BOE`s dicussion on mass production yield and equipment requirements highlights scalability challenges that are addressed here by optimizing Micro-LED transfer and alignment processes.
+The spatial pixel partitioning approach in Micro-LED dual view displays provides multiple benefits over other methods such as parallax barrier or polarization-based separation.
+First, it maximizes light efficiency by directly assigning emission zones without requiring absorptive or refractive elements.  
+Second, the reduced crosstalk enables clear separation between driver and passenger views, critical for safety and privacy.
+Third, the environmental durability of Micro-LEDs ensures performance under harsh automotive conditions.
+From a manufacturing perspective, pixel-level partitioning can be achieved using existing fine-pitch transfer and alignment processes, making it scalable to lager panels. The main technical challenges include improving green emitter efficiency and achieving tight pixel registration to prevent leakage between views. Future work could explore adaptive partitioning using eye tracking, enabling dynamic reallocation of pixel domains based on viewer position.
+
+5. Conclusion
+This study demonstrated the design, fabrication, and evaluation of high-brightness dual-view Micro-LED display tailored for automotive application. The proposed panel, employing pixel-domain separation, enables simultaneous rendering of distinct content for the front information display(FID) and the passenger information display(PID), while maintaining high luminance, wide viewing angles, and low crosstalk.
+Experimental results confirmed that 2.1-inch RGB stripe Micro-LED panel achieved over 1200nits per view, with viewing cones of approximately 40-45 degree and crosstalk levels below 2%. The device sustained stable optical performance under stringent automotive environmental conditions, including thermal cycling from -30도씨 to +85도씨, high humidity, and vibration tests, indicating strong reliability for in-vehicle deployment.
+Compared with conventional OLED or LCD-based dual-view solutions, the Micro-LED approach offers superior brightness retention, immunity to burn-in, and enhanceed environmental durability. These advantages directly address limitations highlighted in prior works such as Blankenbach and Reichel`s study on Switchable Privacy Displays, and broaden the scope for integrating dual-view technology in safety-critical driver and co-passenger scenarious.
+Beyond the demonstrated FID-PID configuration, the architecture can be extended to integrate CID(Central Information Display) and advanced human-machine interface functions, including augmented reality overlays and adaptive privacy modes. Such capabilities align with emerging automotive trends for personalized content delivery, improved safety, and compliance with ISO/SAE automotive display standards.
+Future work will focus on futher improving the luminous efficiency of green emitters, refining pixel registration accuracy, and implementing dynamic pixel allocation using real-time eye-tracking to optimize viewing experiences. The combination of high optical performance, robust environmental stability, and versatile application potential position the proposed Micro-LED dual-view display as a promising next-generation HMI technology for the automotive sector...
