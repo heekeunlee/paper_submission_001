@@ -11,6 +11,17 @@
 </head>
 
 <body>
+    <!-- Password Overlay -->
+    <div id="password-overlay">
+        <div class="password-box">
+            <h2>🔒 보안 접속</h2>
+            <p>프로젝트 접근 권한을 확인합니다.<br>비밀번호 4자리를 입력하세요.</p>
+            <input type="password" id="password-input" maxlength="4" placeholder="----" onkeyup="checkEnter(event)">
+            <button onclick="checkPassword()">확인</button>
+            <p id="error-msg" class="error-msg"></p>
+        </div>
+    </div>
+
     <header class="hero">
         <div class="container">
             <span class="badge">대외비 (CONFIDENTIAL)</span>
@@ -170,6 +181,36 @@
     <footer>
         <p>2026 Paper Submission Strategy Report • Updated for Deep Dive Analysis</p>
     </footer>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('password-input').value;
+            const overlay = document.getElementById('password-overlay');
+            const errorMsg = document.getElementById('error-msg');
+
+            if (input === '0001') {
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 500);
+            } else {
+                errorMsg.textContent = '비밀번호가 올바르지 않습니다.';
+                document.getElementById('password-input').value = '';
+                document.getElementById('password-input').focus();
+            }
+        }
+
+        function checkEnter(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        }
+
+        // Focus input on load
+        window.onload = function () {
+            document.getElementById('password-input').focus();
+        }
+    </script>
 </body>
 
 </html>
