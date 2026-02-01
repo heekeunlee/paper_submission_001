@@ -152,27 +152,78 @@
 
         <!-- Section 3: Re-structured Outline -->
         <section id="outline" class="card warning-border">
-            <h2>📄 3단계: 논문 리빌딩 구조 (Structure Update)</h2>
+            <h2>📄 3단계: 논문 리빌딩 구조 (Hyper-Detailed Outline)</h2>
+            <p class="intro">단순 목차가 아닌, 각 문단(Paragraph)이 갖춰야 할 논리와 데이터를 사전에 정의합니다.</p>
             <div class="outline-box">
-                <ul>
-                    <li><strong>Title:</strong> <span style="color:#2563eb">Zero-Crosstalk, Burn-in Free Reference
-                            Display for Next-Gen Autonomous Cockpits</span></li>
-                    <li><strong>1. Introduction:</strong> 자율주행 시대 HMI의 변화 → 기존 디스플레이(OLED/LCD)의 <strong>Fatal
-                            Problem</strong> 정의.</li>
-                    <li><strong>2. Micro-LED Dual View Design:</strong>
+                <ul class="tree-list">
+                    <li>
+                        <span class="chapter">Title</span>
+                        <strong>Zero-Crosstalk, Burn-in Free Reference Display for Next-Gen Autonomous Cockpits</strong>
+                        <p class="desc">부제: A Scalable Micro-LED Approach for Dual-View HMI</p>
+                    </li>
+                    <li>
+                        <span class="chapter">1. Introduction (서론)</span>
                         <ul>
-                            <li>픽셀 구조 설계 (홀/짝수열 분리).</li>
-                            <li><strong>(New)</strong> 대면적 확장을 고려한 전사 공정 및 정렬 알고리즘 설명.</li>
+                            <li><strong>1.1 Motivation:</strong> 자율주행 L3+ 시대, 'Driver Safety'와 'Passenger
+                                Entertainment'의 공존 필요성 대두.</li>
+                            <li><strong>1.2 State-of-the-Art (Limitation):</strong>
+                                <ul>
+                                    <li><strong>OLED 한계:</strong> Organic 소재의 본질적 문제 (Burn-in, 고온 휘도 저하, ABL).</li>
+                                    <li><strong>LCD 한계:</strong> Barrier로 인한 심각한 휘도 손실 및 낮은 명암비(Contrast).</li>
+                                </ul>
+                            </li>
+                            <li><strong>1.3 Proposal:</strong> 무기물(Inorganic) Micro-LED를 이용한 'No-Compromise' 솔루션 제안.
+                            </li>
                         </ul>
                     </li>
-                    <li><strong>3. Experimental Results (The Core):</strong>
+                    <li>
+                        <span class="chapter">2. Design & Simulation (설계 및 검증)</span>
                         <ul>
-                            <li><strong>Optical:</strong> 1200 nits (High APL) & Crosstalk &lt; 2%.</li>
-                            <li><strong>Reliability (Highlight):</strong> 85°C/85%RH & Thermal Shock 데이터.</li>
-                            <li><strong>Comparison:</strong> OLED APL 커브 vs Micro-LED 비교 (결정적 한 방).</li>
+                            <li><strong>2.1 Optical Architecture:</strong>
+                                <ul>
+                                    <li><strong>Ray-Tracing:</strong> Barrier 높이/너비 변수에 따른 Crosstalk 민감도 시뮬레이션.</li>
+                                    <li><strong>Sweet Spot:</strong> 공정 오차(Margin)를 흡수하는 최적의 설계값(Offset) 도출 과정.</li>
+                                </ul>
+                            </li>
+                            <li><strong>2.2 Scalable Fabrication (양산성 논리):</strong>
+                                <ul>
+                                    <li><strong>Mass Transfer:</strong> 기판 크기에 독립적인(Size-independent) 스탬프 전사 공정.</li>
+                                    <li><strong>Warpage Control:</strong> 대면적(12인치+) 글래스 공정 시 평탄도 확보 방안 제시.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                    <li><strong>4. Conclusion:</strong> 차량용 디스플레이의 안전 및 신뢰성 표준을 재정립함.</li>
+                    <li>
+                        <span class="chapter">3. Experimental Results (핵심 결과)</span>
+                        <ul>
+                            <li><strong>3.1 Optical Performance (압도적 화질):</strong>
+                                <ul>
+                                    <li><strong>Peak Luminance:</strong> 1200+ nits (백색 화면 100%에서도 휘도 저하 없음).</li>
+                                    <li><strong>Crosstalk:</strong> &lt; 1.8% (운전자 시야각 내 동영상 완벽 차단).</li>
+                                </ul>
+                            </li>
+                            <li><strong>3.2 Environmental Reliability (결정적 우위):</strong>
+                                <ul>
+                                    <li><strong>Thermal Shock:</strong> -40℃ ↔ 85℃ 500 Cycle 후 Dead Pixel 0%.</li>
+                                    <li><strong>High Temp/Humid (85/85):</strong> 색좌표 변화(△u'v') &lt; 0.005 (육안 식별 불가).
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="chapter">4. Discussion (고찰)</span>
+                        <ul>
+                            <li><strong>4.1 Comparative Analysis:</strong> 경쟁 기술(WOLED, IPS-LCD) 대비 우위 비교표(Performance
+                                Matrix).</li>
+                            <li><strong>4.2 Regulatory Compliance:</strong> Euro NCAP 등 국제 안전 규제(Driver Distraction) 만족
+                                여부.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="chapter">5. Conclusion (결론)</span>
+                        <p class="desc">"Micro-LED만이 미래 모빌리티 듀얼뷰 디스플레이의 유일한 대안(Reference)이다."</p>
+                    </li>
                 </ul>
             </div>
         </section>
