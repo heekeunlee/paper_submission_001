@@ -141,23 +141,143 @@ body {
     display: inline-block;
 }
 
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
 .download-btn {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 30px;
     font-weight: 600;
     font-size: 0.95rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.2s ease;
+    min-width: 160px;
+}
+
+.download-btn.primary {
+    background-color: white;
+    color: #1e3a8a;
+    border: 2px solid white;
+}
+
+.download-btn.secondary {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .download-btn:hover {
-    background-color: white;
-    color: #0f172a;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn.primary:hover {
+    background-color: #f1f5f9;
+}
+
+.download-btn.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: white;
+}
+
+/* Annotated Preview */
+.paper-preview {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-family: 'Times New Roman', serif;
+    /* Academic feel */
+    line-height: 1.8;
+    color: #334155;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+}
+
+.paper-preview h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 10px;
+}
+
+.paper-preview p {
+    margin-bottom: 1.5em;
+    font-size: 1.05rem;
+}
+
+.highlight {
+    background-color: #fef08a;
+    /* Yellow highlighter */
+    padding: 2px 0;
+    cursor: help;
+    position: relative;
+    border-bottom: 2px solid #eab308;
+    transition: background-color 0.2s;
+}
+
+.highlight:hover {
+    background-color: #fde047;
+}
+
+.highlight-demo {
+    background-color: #fef08a;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* Tooltip Logic */
+.highlight::after {
+    content: attr(data-note);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: #1e293b;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: 'Pretendard', sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.highlight:hover::after,
+.highlight:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Cards */

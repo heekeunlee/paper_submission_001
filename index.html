@@ -27,14 +27,42 @@
             <span class="badge">대외비 (CONFIDENTIAL)</span>
             <h1>피닉스 PJT: 2026 논문 리빌딩 전략</h1>
             <p class="subtitle">작년의 실패를 철저히 해부하고, 기술적 깊이와 논리를 보강하여<br>Best Paper Award를 달성하기 위한 심층 리포트</p>
-            <div style="margin-top: 25px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
-                <a href="original_script.txt" download class="download-btn">📄 기존 원고(2025 버전) 다운로드</a>
-                <a href="03_PAPER_DRAFT_2026.md" download class="download-btn">📝 2026 리빌딩 원고(초안) 다운로드</a>
+            <div class="btn-group">
+                <a href="03_PAPER_DRAFT_2026.txt" download class="download-btn secondary">📄 TXT 다운로드</a>
+                <a href="03_PAPER_DRAFT_2026.md" download class="download-btn primary">� DOCX (Markdown) 다운로드</a>
             </div>
+
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">* DOCX 버튼은 Markdown 형식으로 제공됩니다.</p>
         </div>
     </header>
 
     <main class="container">
+
+        <!-- New Section: Draft Preview -->
+        <section id="preview" class="card">
+            <h2>📝 2026 리빌딩 원고 미리보기 (Annotated Preview)</h2>
+            <p class="intro">수정된 전략이 실제 원고에 어떻게 반영되었는지 확인하세요. <span class="highlight-demo">형광펜</span> 부분에 마우스를 올리면 주석이
+                보입니다.</p>
+
+            <div class="paper-preview">
+                <h3>Abstract (초록)</h3>
+                <p>
+                    본 논문은 차량용 디스플레이의 안전성과 내구성 표준을 재정립하는 <span class="highlight"
+                        data-note="전략 #5: 두괄식 구성. 핵심 수치를 첫 문장에 배치하여 임팩트 강화">1200 nits 고휘도, 크로스토크 1.8% 미만의 마이크로 LED 기반 듀얼
+                        뷰 디스플레이를 제안한다.</span>
+                    기존의 OLED 기반 듀얼 뷰 기술은 <span class="highlight" data-note="전략 #1: OLED 약점(고온 휘도 저하, 번인)을 직접 언급하며 공격">차량
+                        내 가혹 환경(85℃)에서의 휘도 저하와 고정형 UI에 의한 번인(Burn-in) 문제로 인해 안전에 치명적인 한계를 보여왔다.</span>
+                </p>
+                <p>
+                    본 연구는 독자적인 픽셀 분할 구조와 <span class="highlight" data-note="전략 #4: 대면적 확장성(Scalability) 논리 보강">대면적 확장이
+                        가능한(Size-independent) 스탬프 전사 공정</span>을 통해 이러한 한계를 극복했다.
+                    제작된 프로토타입은 <span class="highlight" data-note="전략 #2: 가장 강력한 무기인 85/85 신뢰성 데이터 전진 배치">-40℃에서 85℃에 이르는
+                        열충격 테스트와 고온고습(85℃/85%RH) 환경에서 OLED 대비 탁월한 신뢰성(휘도 저하 0%)을 입증하였으며,</span>
+                    <span class="highlight" data-note="전략 #3: 크로스토크 < 2%를 단순 스펙이 아닌 '안전 규제(Euro NCAP)' 대응으로 연결">유로 NCAP
+                        등의 운전자 주의 분산 방지 규제를 만족하는 차세대 차량용 HMI의 유일한 대안임을 제시한다.</span>
+                </p>
+            </div>
+        </section>
 
         <!-- Section 1: Failure Analysis -->
         <section id="analysis" class="card danger-border">
