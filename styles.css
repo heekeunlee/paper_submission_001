@@ -233,18 +233,20 @@ body {
 /* Strategy List */
 .strategy-item {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     margin-bottom: 40px;
     align-items: flex-start;
 }
 
 .strategy-item .number {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 900;
     color: #cbd5e1;
-    line-height: 0.8;
-    min-width: 50px;
+    line-height: 1;
+    min-width: 35px;
     text-align: right;
+    margin-top: -5px;
+    /* Visual optical alignment */
 }
 
 .strategy-item .content {
