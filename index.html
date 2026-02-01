@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 논문 수상 전략 보고서</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" />
 </head>
 
 <body>
@@ -16,7 +15,7 @@
         <div class="container">
             <span class="badge">대외비 (CONFIDENTIAL)</span>
             <h1>Project Phoenix: 2026 논문 수상 전략</h1>
-            <p class="subtitle">작년의 실패를 딛고 최우수 논문상(Best Paper Award)을 거머쥐기 위한 리빌딩 가이드</p>
+            <p class="subtitle">작년의 실패를 철저히 해부하고, 기술적 깊이와 논리를 보강하여<br>Best Paper Award를 달성하기 위한 심층 리포트</p>
         </div>
     </header>
 
@@ -24,110 +23,133 @@
 
         <!-- Section 1: Failure Analysis -->
         <section id="analysis" class="card danger-border">
-            <h2>🚨 1단계: 실패 원인 분석 (Failure Analysis)</h2>
-            <p class="intro">작년 제출본은 왜 떨어졌을까? 심사위원의 관점에서 본 냉철한 회고.</p>
+            <h2>🚨 1단계: 실패 원인 심층 분석 (Deep Dive)</h2>
+            <p class="intro">"왜 떨어졌는가?" 심사위원(Reviewer)의 뇌구조를 역추적하여 4가지 치명적 결함을 도출했습니다.</p>
 
-            <div class="grid-2">
-                <div class="analysis-item">
-                    <h3>❌ 임팩트 부족 (Scalability 이슈)</h3>
-                    <p>프로토타입이 고작 <strong>2.1인치</strong>였습니다. 심사위원들은 이를 15인치 대화면 칵핏(Cockpit)에 적용할 수 있을지 의구심을 가졌으며, 단순한
-                        '실험실 장난감' 수준으로 저평가했을 가능성이 큽니다.</p>
-                </div>
-                <div class="analysis-item">
-                    <h3>❌ 비교 우위 입증 실패</h3>
-                    <p>단지 BOE의 논문 한 편과 비교하는 데 그쳤습니다. 현재 시장의 지배자인 <strong>OLED Dual View</strong> 기술을 직접 언급하며 부수지 못했습니다.
-                    </p>
-                </div>
-                <div class="analysis-item">
-                    <h3>❌ 데이터 신뢰도 문제</h3>
-                    <p>초록(Abstract)에서는 1200 nits라고 했지만, 결과(Result)에서는 ~1000 nits라고 적혀있었습니다. 이런 수치 불일치는 논문의 신뢰도를 치명적으로
-                        떨어뜨립니다.</p>
-                </div>
-                <div class="analysis-item">
-                    <h3>❌ '왜(Why)'에 대한 설득 부족</h3>
-                    <p>'어떻게 만들었다'는 기술했지만, <strong>왜 Micro-LED여야만 하는가</strong>(열 문제, 수명 문제)에 대한 강력한 당위성 주장이 빠져있었습니다.</p>
-                </div>
+            <div class="detail-list">
+                <article>
+                    <h3>1. 스케일업(Scalability) 검증의 부재</h3>
+                    <p class="critical-text">"2.1인치는 장난감이다."</p>
+                    <p>차량용 디스플레이(CID/PID)의 표준은 최소 10~15인치입니다. 2.1인치 시제품 성공만으로는 <strong>"대면적 기판에서의 휨(Warpage)
+                            제어"</strong>나 <strong>"수백만 개 칩의 전사(Transfer) 균일도"</strong>를 전혀 증명하지 못합니다. 심사위원은 이 기술이 실제 차량
+                        사이즈로 커졌을 때 픽셀 정렬이 틀어질 것이라고 판단했을 것입니다.</p>
+                </article>
+
+                <article>
+                    <h3>2. 'Real Competitor' 회피</h3>
+                    <p class="critical-text">"철 지난 BOE LCD 논문만 때렸다."</p>
+                    <p>현재 시장의 최강자는 <strong>OLED 듀얼뷰</strong>입니다. 작년 논문은 백라이트가 필요한 LCD 기술의 한계(BOE)만 지적했습니다. 심사위원이 정말
+                        궁금해하는 <strong>OLED 대비 Micro-LED의 우위(번인, 고휘도 유지력)</strong>에 대한 직접적인 비교 데이터가 빠져 있어, 기술적
+                        시의성(Timeliness)이 떨어진다는 평가를 받았습니다.</p>
+                </article>
+
+                <article>
+                    <h3>3. 엔지니어링 데이터의 정합성 문제</h3>
+                    <p class="critical-text">"신뢰할 수 없는 데이터."</p>
+                    <p>Abstract에서는 <strong>1200 nits</strong>를 달성했다고 적었으나, 본문 3.2절 그래프에서는 <strong>~1000 nits</strong>
+                        수준으로 표기되었습니다. 또한 광효율(Efficiency) 계산 시 배리어에 의한 손실률이 이론치와 실측치 간에 어떻게 매칭되는지 분석이 없었습니다. 이는 연구의 완성도가
+                        덜 되었다는 인상을 줍니다.</p>
+                </article>
+
+                <article>
+                    <h3>4. 'Automotive Grade' 검증 부족</h3>
+                    <p class="critical-text">"가혹 조건 테스트의 깊이 부족."</p>
+                    <p>차량용 디스플레이는 단순 구동이 아니라, <strong>1000시간 이상의 신뢰성</strong>을 요구합니다. 작년 논문의 '168시간 테스트'는 초기 불량 검출
+                        수준입니다. 특히 고온에서의 파장 변화(Color Shift)나 접합부 크랙 발생 여부 등 심층적인 파괴 분석 데이터가 전무했습니다.</p>
+                </article>
             </div>
         </section>
 
         <!-- Section 2: Winning Strategy -->
         <section id="strategy" class="card success-border">
-            <h2>🏆 2단계: 필승 전략 (Winning Strategy)</h2>
-            <p class="intro">올해 수상을 위해 반드시 강조해야 할 "핵심 무기 (Killer Content)"</p>
+            <h2>🏆 2단계: 필승 전략 (Action Plan)</h2>
+            <p class="intro">올해는 단순한 '개발기'가 아닌, 산업계의 난제를 해결한 '솔루션'으로 접근합니다.</p>
 
             <div class="strategy-list">
                 <div class="strategy-item">
                     <div class="number">01</div>
                     <div class="content">
-                        <h3>Pain Point 타격 (OLED의 약점 공격)</h3>
-                        <p>전기차(EV) 환경에서 OLED가 가진 치명적 약점인 <strong>번인(Burn-in)</strong>과 <strong>고온 휘도 저하</strong>를 공격적으로
-                            언급하고, 우리 기술이 유일한 해결책임을 강조합니다.</p>
+                        <h3>OLED의 '아킬레스건' 정밀 타격 (APL & Burn-in)</h3>
+                        <p><strong>공격 논리:</strong> OLED는 화면 전체가 밝아지면 소자 보호를 위해 강제로 밝기를 낮추는 <strong>ABL(Auto Brightness
+                                Limiter)</strong>이 작동합니다. 눈길 운전이나 흰색 배경의 지도 앱 사용 시 시인성이 급감합니다.</p>
+                        <ul class="sub-list">
+                            <li><strong>Action:</strong> APL(Average Picture Level) 변화에 따른 휘도 유지율 비교 그래프 삽입 (Micro-LED는
+                                100% 유지 vs OLED는 50% 급감).</li>
+                            <li><strong>Action:</strong> 고정된 UI(속도계 등)에서의 번인 가속 테스트 예상치 제시.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="strategy-item">
                     <div class="number">02</div>
                     <div class="content">
-                        <h3>신뢰성(Reliability) 데이터 전방 배치</h3>
-                        <p><strong>85°C / 85% RH</strong> 테스트 결과를 논문의 하이라이트로 내세웁니다. <br><em>"이 조건에서 OLED는 죽지만,
-                                Micro-LED는 살아남는다."</em> 이것이 가장 확실한 수상 포인트입니다.</p>
+                        <h3>85°C/85%RH: '죽음의 계곡' 생존 증명</h3>
+                        <p><strong>방어 논리:</strong> 유기물(Organic)인 OLED는 고온다습 환경에서 급격히 수명이 줄어듭니다. 반면 무기물(Inorganic)인 GaN
+                            Micro-LED는 변하지 않습니다.</p>
+                        <ul class="sub-list">
+                            <li><strong>Action:</strong> 85/85 챔버 테스트 시간을 작년 대비 2배 명시하거나, <strong>가속 수명 모델(Arrhenius
+                                    plot)</strong>을 적용하여 10년 수명을 예측한 데이터를 추가합니다.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="strategy-item">
                     <div class="number">03</div>
                     <div class="content">
-                        <h3>'안전(Safety)' 프레임 씌우기 (Zero-Crosstalk)</h3>
-                        <p>2% 미만의 Crosstalk를 단순 광학 스펙이 아닌, 운전자 주의 분산을 막는 <strong>안전 필수 기능</strong>으로 포장하여 가치를 높입니다.</p>
+                        <h3>'안전(Safety)'을 위한 Zero-Crosstalk 법규 대응</h3>
+                        <p><strong>가치 제안:</strong> 듀얼뷰의 크로스토크(화면 겹침)는 단순 화질 문제가 아니라, 운전자의 시선을 뺏는 <strong>치명적 안전 사고
+                                원인</strong>입니다.</p>
+                        <ul class="sub-list">
+                            <li><strong>Action:</strong> 유럽/북미의 차량 내 디스플레이 안전 규제(운전자 시야각 내 동영상 시청 금지 등)를 인용하며 당사의
+                                <strong>&lt;2% 크로스토크</strong> 기술이 이를 만족시키는 유일한 솔루션임을 강조합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="strategy-item">
+                    <div class="number">04</div>
+                    <div class="content">
+                        <h3>"작아도 괜찮아" 논리 (Scalability Logic)</h3>
+                        <p><strong>약점 보완:</strong> 2.1인치의 한계를 극복하기 위해 '타일링(Tiling)' 혹은 '전사 공정의 확장성'을 이론적으로 증명합니다.</p>
+                        <ul class="sub-list">
+                            <li><strong>Action:</strong> 우리가 사용한 전사 방식이 기판 사이즈에 독립적(Size-independent) 임을 보여주는 공정 모식도 추가.
+                            </li>
+                            <li><strong>Action:</strong> 대면적 시뮬레이션 데이터를 통해 12인치에서도 정렬 오차가 허용 범위(Tolerance) 내에 들어옴을 수치로
+                                제시.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 3: Re-structured Outline -->
-        <section id="outline" class="card">
-            <h2>📄 3단계: 새로운 논문 구성 (Structure)</h2>
+        <section id="outline" class="card warning-border">
+            <h2>📄 3단계: 논문 리빌딩 구조 (Structure Update)</h2>
             <div class="outline-box">
                 <ul>
-                    <li><strong>Title:</strong> Zero-Crosstalk, Burn-in Free Reference Display for Next-Gen Autonomous
-                        Cockpits<br><small>(차세대 자율주행 칵핏을 위한 제로-크로스토크, 번인 프리 레퍼런스 디스플레이)</small></li>
-                    <li><strong>1. Introduction (서론):</strong> 운전자 안전(FID) vs 동승자 정보(PID) 충돌 상황과 기존 OLED/LCD의 한계(열/휘도)
-                        지적.</li>
-                    <li><strong>2. The Challenge (기술적 난제):</strong> 왜 듀얼뷰가 휘도와 효율을 깎아먹는가? 이를 극복하기 위한 Micro-LED 접근법.</li>
-                    <li><strong>3. Solution (해결책):</strong>
+                    <li><strong>Title:</strong> <span style="color:#2563eb">Zero-Crosstalk, Burn-in Free Reference
+                            Display for Next-Gen Autonomous Cockpits</span></li>
+                    <li><strong>1. Introduction:</strong> 자율주행 시대 HMI의 변화 → 기존 디스플레이(OLED/LCD)의 <strong>Fatal
+                            Problem</strong> 정의.</li>
+                    <li><strong>2. Micro-LED Dual View Design:</strong>
                         <ul>
-                            <li><strong>광학 시뮬레이션:</strong> 크로스토크가 0이 되는 'Sweet Spot' 최적화 과정.</li>
-                            <li><strong>양산성(Scalability):</strong> 2.1인치를 넘어 대형 패널에도 적용 가능한 전사 공정 논리.</li>
+                            <li>픽셀 구조 설계 (홀/짝수열 분리).</li>
+                            <li><strong>(New)</strong> 대면적 확장을 고려한 전사 공정 및 정렬 알고리즘 설명.</li>
                         </ul>
                     </li>
-                    <li><strong>4. Verification (검증 및 결과):</strong> <span class="badge"
-                            style="color:white; background:#ef4444; font-size:0.7em;">가장 중요</span>
+                    <li><strong>3. Experimental Results (The Core):</strong>
                         <ul>
-                            <li><strong>>1200 nits:</strong> 주간 시인성을 보장하는 압도적 밝기.</li>
-                            <li><strong>
-                                    <2% Degradation:</strong> 85도 극한 환경에서도 변함없는 내구성.</li>
-                            <li><strong>비교표(Comparison):</strong> OLED vs LCD vs Micro-LED 3파전 비교 승리.</li>
+                            <li><strong>Optical:</strong> 1200 nits (High APL) & Crosstalk &lt; 2%.</li>
+                            <li><strong>Reliability (Highlight):</strong> 85°C/85%RH & Thermal Shock 데이터.</li>
+                            <li><strong>Comparison:</strong> OLED APL 커브 vs Micro-LED 비교 (결정적 한 방).</li>
                         </ul>
                     </li>
-                    <li><strong>5. Conclusion (결론):</strong> "이것만이 유일한 장기적 대안이다"라는 강한 맺음말.</li>
+                    <li><strong>4. Conclusion:</strong> 차량용 디스플레이의 안전 및 신뢰성 표준을 재정립함.</li>
                 </ul>
             </div>
-        </section>
-
-        <!-- Section 4: Missing & Further Needs -->
-        <section id="needs" class="card warning-border">
-            <h2>⚠️ 4단계: 추가 필요 사항 (Action Items)</h2>
-            <p>전략 완수를 위해 다음 데이터 보강이 시급합니다:</p>
-            <ul class="checklist">
-                <li><strong>[데이터] 열해석 시뮬레이션:</strong> 고휘도 구동 시 OLED 대비 낮은 발열을 보여주는 데이터.</li>
-                <li><strong>[논리] 대면적화(Scalability) 입증:</strong> 전사 수율 데이터를 통해 대형화 가능성을 글로라도 강력히 주장해야 함.</li>
-                <li><strong>[시각화] 시인성(Legibility) 테스트:</strong> 실제 사람이 봤을 때 글자가 얼마나 또렷한지 보여주는 비교 사진.</li>
-                <li><strong>[비교] 스파이더 차트:</strong> 경쟁 기술 대비 우위를 한눈에 보여주는 도표.</li>
-            </ul>
         </section>
 
     </main>
 
     <footer>
-        <p>2026 Paper Submission Strategy • Confidential Report</p>
+        <p>2026 Paper Submission Strategy Report • Updated for Deep Dive Analysis</p>
     </footer>
 </body>
 
