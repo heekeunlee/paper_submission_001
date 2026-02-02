@@ -312,6 +312,59 @@ body {
     border-left-color: var(--warning-border);
 }
 
+/* Collapsible Sections */
+.collapsible-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* user-select: none; */
+}
+
+.collapsible-header h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+    flex: 1;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+}
+
+.collapsible-content {
+    display: none;
+    /* Hidden by default */
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.collapsible-content.expanded {
+    display: block;
+}
+
+.collapsible-header.active .toggle-icon {
+    transform: rotate(180deg);
+    color: #0f172a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Detailed Article Style */
 .detail-list article {
     margin-bottom: 35px;

@@ -49,7 +49,7 @@
                 <p>
                     본 논문은 자율주행 레벨 4 시대의 차량용 디스플레이 표준을 재정립하기 위해, <span class="highlight"
                         data-note="전략 #1: 압도적 스펙 제시. 1200 nits는 경쟁사가 따라올 수 없는 수치임을 첫 줄부터 강조.">1200 nits의 고휘도와 1.8% 미만의
-                        크로스토크(Crosstalk)를 동시에 달성한 Active Matrix Micro-LED 듀얼 뷰 디스플레이를 제안한다.</span>
+                        크로스토크(Crosstalk)를 동시에 달성한 <strong>Active Matrix Micro-LED 듀얼 뷰 디스플레이</strong>를 제안한다.</span>
                     기존의 OLED 기반 기술은 차량 내 가혹 환경(85℃)에서의 휘도 저하와 고정형 UI(속도계 등)에 의한 번인(Burn-in) 문제로 인해 안전성에 치명적인 한계를 보여왔다.
                 </p>
                 <p>
@@ -57,8 +57,8 @@
                     첫째, <span class="highlight" data-note="전략 #2: 기존의 설계 우수성 재확인.">독자적인 픽셀 분할(Pixel Partitioning) 광학 구조를
                         통해 운전자와 동승자의 시야를 완벽히 분리했다.</span>
                     둘째, <span class="highlight"
-                        data-note="[NEW] 전략 #6: 회로 구동 기술(Circuit Driving) 추가. 단순 소자 논문이 아님을 어필.">LTPS TFT 백플레인과 **PWM 구동
-                        방식**을 결합하여, 저계조에서의 색 틀어짐(Wavelength Shift) 없이 정확한 색상을 구현했다.</span>
+                        data-note="[NEW] 전략 #6: 회로 구동 기술(Circuit Driving) 추가. 단순 소자 논문이 아님을 어필.">LTPS TFT 백플레인과
+                        <strong>PWM 구동 방식</strong>을 결합하여, 저계조에서의 색 틀어짐(Wavelength Shift) 없이 정확한 색상을 구현했다.</span>
                     셋째, 선택적 스탬프 전사 공정과 리페어 알고리즘을 도입하여 99.99% 이상의 공정 수율을 확보했다.
                     제작된 12.3인치급 프로토타입은 <span class="highlight"
                         data-note="전략 #3: 신뢰성 종결. -40~85도 챔버 테스트 통과 데이터는 반박 불가한 팩트.">-40℃에서 85℃에 이르는 열충격 테스트와
@@ -77,45 +77,49 @@
                 <p>그러나 현재 상용화된 기술들은 엄격한 안전 및 신뢰성 기준을 충족시키지 못한다. LCD 방식은 광 손실과 낮은 명암비로 인해 시인성이 떨어진다. OLED 방식은 완벽한 블랙 표현이
                     가능하나, 치명적인 약점을 가진다. <span class="highlight"
                         data-note="전략 #4: OLED 약점 정밀 타격. Burn-in은 OLED의 영원한 숙제.">첫째, 내비게이션 바나 속도계와 같은 고정 UI가 장시간 표시될 경우
-                        **번인(Burn-in)** 현상이 발생하여 영구적 잔상이 남는다.</span> <span class="highlight"
+                        <strong>번인(Burn-in)</strong> 현상이 발생하여 영구적 잔상이 남는다.</span> <span class="highlight"
                         data-note="전략 #4: ABL의 위험성 부각. 눈 덮인 도로에서의 급격한 휘도 저하는 사고 원인이 될 수 있음.">둘째, 고온(80℃ 이상) 환경에서 발열 제어를
-                        위한 **ABL(Auto Brightness Limiter)** 작동으로 화면이 강제로 어두워져, 고조도 환경에서 사고를 유발할 수 있다.</span></p>
+                        위한 <strong>ABL(Auto Brightness Limiter)</strong> 작동으로 화면이 강제로 어두워져, 고조도 환경에서 사고를 유발할 수
+                        있다.</span></p>
 
                 <h4>1.3 The Micro-LED Proposal</h4>
                 <p>우리는 무기물(Inorganic) 기반의 Active Matrix Micro-LED 듀얼 뷰 디스플레이를 제안한다. <span class="highlight"
-                        data-note="[NEW] 전략 #6: 시스템 레벨의 완성도 강조. 소자-회로-공정 3박자.">본 연구는 단순한 소자 변경을 넘어, **광학 설계, 구동 회로,
-                        공정**의 3박자를 갖춘 통합 솔루션을 통해 차세대 칵핏 디스플레이의 새로운 레퍼런스를 제시한다.</span></p>
+                        data-note="[NEW] 전략 #6: 시스템 레벨의 완성도 강조. 소자-회로-공정 3박자.">본 연구는 단순한 소자 변경을 넘어, <strong>광학 설계, 구동
+                            회로, 공정</strong>의 3박자를 갖춘 통합 솔루션을 통해 차세대 칵핏 디스플레이의 새로운 레퍼런스를 제시한다.</span></p>
 
                 <h3>2. Design & Fabrication (설계 및 제작)</h3>
                 <h4>2.1 Optical Architecture: Managing Light Paths</h4>
                 <p>우리는 몬테카를로 시뮬레이션을 통해 픽셀 분할 구조를 최적화했다. 특히 배리어의 측면 경사각을 85도 이상으로 설계하고 흡광 코팅을 적용하여 'Secondary Crosstalk'를
                     90% 이상 억제했다. <span class="highlight"
-                        data-note="전략 #7: 엔지니어링 디테일. 구체적인 오차 허용치(Tolerance) 명시로 신뢰도 상승.">또한 **정렬 오차(Misalignment
-                        Tolerance)** 분석을 통해 BM1 +8μm, OC 6μm, BM2 +3.5μm 오프셋 시키는 'Sweet Spot'을 도출, ±2μm 오차 내에서도 크로스토크 2%
-                        미만을 보장한다.</span></p>
+                        data-note="전략 #7: 엔지니어링 디테일. 구체적인 오차 허용치(Tolerance) 명시로 신뢰도 상승.">또한 <strong>정렬 오차(Misalignment
+                            Tolerance)</strong> 분석을 통해 BM1 +8μm, OC 6μm, BM2 +3.5μm 오프셋 시키는 'Sweet Spot'을 도출, ±2μm 오차
+                        내에서도 크로스토크 2% 미만을 보장한다.</span></p>
 
                 <h4>2.2 Active Matrix Backplane Strategy</h4>
                 <p><span class="highlight"
                         data-note="[NEW] 전략 #6: 구동 방식 차별화. PAM vs PWM 논리 전개. 저계조 색정확도(Wavelength Shift 방지)는 학계에서 주목하는 포인트.">Micro-LED는
-                        전류 밀도에 따라 파장이 변하는 특성이 있어 아날로그 제어(PAM) 시 색 틀어짐이 발생한다. 이를 해결하기 위해 **Digital PWM 구동 방식**을 채택했다. 전류
-                        크기는 고정하고 발광 시간만 조절하여, 0.1 nit부터 1200 nits까지 전 구간에서 색좌표 변화(Δu'v')를 0.002 이내로 유지했다.</span></p>
+                        전류 밀도에 따라 파장이 변하는 특성이 있어 아날로그 제어(PAM) 시 색 틀어짐이 발생한다. 이를 해결하기 위해 <strong>Digital PWM 구동
+                            방식</strong>을 채택했다. 전류 크기는 고정하고 발광 시간만 조절하여, 0.1 nit부터 1200 nits까지 전 구간에서 색좌표 변화(Δu'v')를
+                        0.002 이내로 유지했다.</span></p>
 
                 <h4>2.3 Scalable Fabrication: Stamp Transfer & Yield Management</h4>
                 <p>본 연구는 12.3인치 대면적 구현을 위해 스탬프 전사 공정을 최적화했다. <span class="highlight"
                         data-note="[NEW] 전략 #8: 구체적인 공정 제어 기술. Kinetic Control 등 있어 보이는 용어 사용.">스탬프 속도 제어(Kinetic
-                        Control)로 99.9% 전사 성공률을 달성했으며, **진공 채널 기반 척(Smart Chuck)**으로 12인치 기판 휨을 실시간 보정하여 위치 정밀도를 ±3μm
-                        이내로 제어했다.</span> 또한, 서브픽셀당 2개의 LED를 배치하는 Redundancy 설계와 레이저 트리밍 리페어로 최종 수율을 99.999%까지 끌어올렸다.</p>
+                        Control)로 99.9% 전사 성공률을 달성했으며, <strong>진공 채널 기반 척(Smart Chuck)</strong>으로 12인치 기판 휨을 실시간 보정하여 위치
+                        정밀도를 ±3μm 이내로 제어했다.</span> 또한, 서브픽셀당 2개의 LED를 배치하는 Redundancy 설계와 레이저 트리밍 리페어로 최종 수율을 99.999%까지
+                    끌어올렸다.</p>
 
                 <h3>3. Experimental Results (실험 결과)</h3>
                 <h4>3.1 Optical Performance Assessment</h4>
-                <p>제작된 12.3인치 프로토타입은 백색 전체 화면 시 **1208 nits**를 기록했다. 이는 ABL로 500 nits 수준에 머무는 OLED 대비 2배 이상이다. <span
-                        class="highlight" data-note="[NEW] 전략 #1: 실외 시인성(ACR) 데이터 추가. 10,000 lux 조건 명시는 자신감의 표현.">또한
-                        10,000 lux 조명 하에서도 **Ambient Contrast Ratio 50,000:1**을 달성하여 직사광선 하에서도 선명한 정보를 전달한다.</span>
-                    크로스토크는 1.8% 미만으로 'Ghost-free' 상태를 구현했다.</p>
+                <p>제작된 12.3인치 프로토타입은 백색 전체 화면 시 <strong>1208 nits</strong>를 기록했다. 이는 ABL로 500 nits 수준에 머무는 OLED 대비 2배
+                    이상이다. <span class="highlight"
+                        data-note="[NEW] 전략 #1: 실외 시인성(ACR) 데이터 추가. 10,000 lux 조건 명시는 자신감의 표현.">또한 10,000 lux 조명 하에서도
+                        <strong>Ambient Contrast Ratio 50,000:1</strong>을 달성하여 직사광선 하에서도 선명한 정보를 전달한다.</span> 크로스토크는
+                    1.8% 미만으로 'Ghost-free' 상태를 구현했다.</p>
 
                 <h4>3.2 Environmental Reliability: The Ultimate Differentiator</h4>
-                <p>업계 표준을 상회하는 **'Torture Test'**를 진행했다. 열충격 500 사이클에서 불량률 0%를 기록했으며, 85℃/85%RH 고온고습 테스트(168시간) 후에도 휘도
-                    변화율 <2%, 색좌표 변화 <0.005를 달성했다. <span class="highlight"
+                <p>업계 표준을 상회하는 <strong>'Torture Test'</strong>를 진행했다. 열충격 500 사이클에서 불량률 0%를 기록했으며, 85℃/85%RH 고온고습
+                    테스트(168시간) 후에도 휘도 변화율 <2%, 색좌표 변화 <0.005를 달성했다. <span class="highlight"
                         data-note="전략 #4: OLED 부관참시. 동일 조건에서 OLED가 얼마나 처참하게 무너졌는지(22% 저하, 변색) 비교.">반면, 동일 조건의 OLED 패널은
                         휘도가 22% 감소하고 화면이 노랗게 변색되었다.</span> 또한 번인 테스트에서도 마이크로 LED는 변화가 없었으나 OLED는 선명한 자국을 남겼다.</p>
 
@@ -123,8 +127,8 @@
                 <h4>4.1 Technical Superiority & Cost Analysis</h4>
                 <p>마이크로 LED는 화면 밝기나 온도에 상관없이 '일관성(Consistency)'을 유지한다. 이는 안전과 직결된다. <span class="highlight"
                         data-note="[NEW] 전략 #9: 가격(Cost) 방어 논리. TCO 관점으로 접근하여 번인 교체 비용까지 포함하면 오히려 싸다고 주장.">비용 우려에 대해서는,
-                        공정 수율 안정화와 칩 효율 개선으로 2028년경 프리미엄 OLED와 **가격 경쟁력(Price Parity)**을 확보할 것으로 전망된다. 특히 번인으로 인한 수명주기
-                        교체 비용(Lifecycle Cost)을 고려하면 총 소유 비용(TCO) 면에서 우위에 있다.</span></p>
+                        공정 수율 안정화와 칩 효율 개선으로 2028년경 프리미엄 OLED와 <strong>가격 경쟁력(Price Parity)</strong>을 확보할 것으로 전망된다. 특히
+                        번인으로 인한 수명주기 교체 비용(Lifecycle Cost)을 고려하면 총 소유 비용(TCO) 면에서 우위에 있다.</span></p>
 
                 <h4>4.2 Regulatory Readiness: Euro NCAP & NHTSA</h4>
                 <p>Euro NCAP과 NHTSA는 운전자 주의 분산 방지 규제를 강화하고 있다. <span class="highlight"
@@ -161,8 +165,8 @@
                     perfectly separates fields of view.
                     <span class="highlight"
                         data-note="[NEW] Strategy #6: Circuit/Driving Innovation. PWM for color accuracy is a key differentiator vs PAM.">Second,
-                        we combined an **LTPS TFT backplane** with a **PWM driving scheme** to achieve accurate color
-                        reproduction without wavelength shift.</span>
+                        we combined an <strong>LTPS TFT backplane</strong> with a <strong>PWM driving scheme</strong> to
+                        achieve accurate color reproduction without wavelength shift.</span>
                     Third, we introduced a Selective Stamp Transfer process securing >99.99% yield.
                     <span class="highlight"
                         data-note="Strategy #3: Reliability Proof. 0% degradation under torture tests (-40~85C) is the killer argument.">The
@@ -181,59 +185,61 @@
                 <h4>1.2 Limitations of Conventional Technologies</h4>
                 <p>Current technologies fail to meet safety standards. LCDs suffer from low luminance and contrast.
                     OLEDs have fatal weaknesses: <span class="highlight"
-                        data-note="Strategy #4: OLED Attack. Burn-in on static UIs (navigation bars) is inevitable.">**Burn-in**
+                        data-note="Strategy #4: OLED Attack. Burn-in on static UIs (navigation bars) is inevitable."><strong>Burn-in</strong>
                         causes permanent afterimages on static UIs.</span> <span class="highlight"
-                        data-note="Strategy #4: ABL Hazard. Sudden dimming in bright environments can cause accidents.">**ABL
-                        (Auto Brightness Limiter)** forcibly dims screens in high temperatures, hindering visibility on
-                        bright roads.</span></p>
+                        data-note="Strategy #4: ABL Hazard. Sudden dimming in bright environments can cause accidents."><strong>ABL
+                            (Auto Brightness Limiter)</strong> forcibly dims screens in high temperatures, hindering
+                        visibility on bright roads.</span></p>
 
                 <h4>1.3 The Micro-LED Proposal</h4>
                 <p>We propose an inorganic Active Matrix Micro-LED Dual-View Display. <span class="highlight"
                         data-note="[NEW] Strategy #6: Total Solution. Optical + Circuit + Process integration.">This
-                        study presents a new reference through an integrated solution encompassing **Optical Design,
-                        Circuit Driving, and Fabrication Process**.</span></p>
+                        study presents a new reference through an integrated solution encompassing <strong>Optical
+                            Design, Circuit Driving, and Fabrication Process</strong>.</span></p>
 
                 <h3>2. Design & Fabrication</h3>
                 <h4>2.1 Optical Architecture</h4>
                 <p>We optimized pixel partitioning via Monte-Carlo simulations, achieving <2% crosstalk. <span
                         class="highlight"
                         data-note="Strategy #7: Engineering Depth. Specific tolerance specs (+8μm offset) improve credibility.">
-                        Through **Misalignment Tolerance** analysis, we derived a 'Sweet Spot' (BM1 +8μm, OC 6μm)
-                        ensuring performance even with ±2μm process variations.</span></p>
+                        Through <strong>Misalignment Tolerance</strong> analysis, we derived a 'Sweet Spot' (BM1 +8μm,
+                        OC 6μm) ensuring performance even with ±2μm process variations.</span></p>
 
                 <h4>2.2 Active Matrix Backplane Strategy</h4>
                 <p><span class="highlight"
                         data-note="[NEW] Strategy #6: PWM Driving Logic. Solving the color shift issue at low currents is a high-tech contribution.">To
-                        resolve wavelength shift in Micro-LEDs, we adopted a **Digital PWM driving scheme**. This fixes
-                        peak current and modulates emission time, maintaining color shift (Δu'v') within 0.002 across
-                        all luminance ranges.</span></p>
+                        resolve wavelength shift in Micro-LEDs, we adopted a <strong>Digital PWM driving
+                            scheme</strong>. This fixes peak current and modulates emission time, maintaining color
+                        shift (Δu'v') within 0.002 across all luminance ranges.</span></p>
 
                 <h4>2.3 Scalable Fabrication</h4>
                 <p>We optimized Stamp Transfer for 12.3-inch displays. <span class="highlight"
                         data-note="[NEW] Strategy #8: Mass Production Feasibility. Smart Chuck & Kinetic Control prove it works on large glass.">Using
-                        **Kinetic Control** and a **Smart Chuck** for warpage correction, we achieved ±3μm precision on
-                        large glass.</span> A redundancy design and laser repair process boosted yield to 99.999%.</p>
+                        <strong>Kinetic Control</strong> and a <strong>Smart Chuck</strong> for warpage correction, we
+                        achieved ±3μm precision on large glass.</span> A redundancy design and laser repair process
+                    boosted yield to 99.999%.</p>
 
                 <h3>3. Experimental Results</h3>
                 <h4>3.1 Optical Performance Assessment</h4>
-                <p>The prototype achieved **1208 nits**, double that of OLEDs. <span class="highlight"
+                <p>The prototype achieved <strong>1208 nits</strong>, double that of OLEDs. <span class="highlight"
                         data-note="[NEW] Strategy #1: Sunlight Readability. 50,000:1 ACR is a massive number for automotive.">We
-                        achieved an **Ambient Contrast Ratio of 50,000:1** under 10,000 lux, ensuring clear visibility
-                        in sunlight.</span> Crosstalk remained <1.8%.< /p>
+                        achieved an <strong>Ambient Contrast Ratio of 50,000:1</strong> under 10,000 lux, ensuring clear
+                        visibility in sunlight.</span> Crosstalk remained <1.8%.< /p>
 
                         <h4>3.2 Environmental Reliability</h4>
-                        <p>We conducted **'Torture Tests'**. Thermal shock showed 0% failure. After 168 hours at
-                            85℃/85%RH, luminance changed <2%. <span class="highlight"
+                        <p>We conducted <strong>'Torture Tests'</strong>. Thermal shock showed 0% failure. After 168
+                            hours at 85℃/85%RH, luminance changed <2%. <span class="highlight"
                                 data-note="Strategy #4: Destroying the Competition. 22% drop in OLED makes Micro-LED look like the only option.">
-                                In contrast, OLEDs showed a **22% luminance drop** and severe yellowing.</span> Burn-in
-                                tests also favored Micro-LEDs significantly.</p>
+                                In contrast, OLEDs showed a <strong>22% luminance drop</strong> and severe
+                                yellowing.</span> Burn-in tests also favored Micro-LEDs significantly.</p>
 
                         <h3>4. Discussion</h3>
                         <h4>4.1 Technical Superiority & Cost Analysis</h4>
                         <p>Micro-LED offers superior consistency and longevity. <span class="highlight"
                                 data-note="[NEW] Strategy #9: Addressing Cost. Price Parity by 2028 + Lower TCO due to no burn-in replacements.">Regarding
-                                cost, we project **Price Parity** with OLED by 2028. Considering lifecycle costs (no
-                                burn-in replacements), Micro-LED offers better Total Cost of Ownership (TCO).</span></p>
+                                cost, we project <strong>Price Parity</strong> with OLED by 2028. Considering lifecycle
+                                costs (no burn-in replacements), Micro-LED offers better Total Cost of Ownership
+                                (TCO).</span></p>
 
                         <h4>4.2 Regulatory Readiness</h4>
                         <p><span class="highlight"
@@ -251,113 +257,131 @@
 
         <!-- Section 1: Failure Analysis -->
         <section id="analysis" class="card danger-border">
-            <h2>🚨 1단계: 실패 원인 심층 분석 (Deep Dive)</h2>
-            <p class="intro">"왜 떨어졌는가?" 심사위원(Reviewer)의 뇌구조를 역추적하여 4가지 치명적 결함을 도출했습니다.</p>
+            <div class="collapsible-header" onclick="toggleSection('analysis')">
+                <h2>🚨 1단계: 실패 원인 심층 분석 (Deep Dive)</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <p class="intro">"왜 떨어졌는가?" 심사위원(Reviewer)의 뇌구조를 역추적하여 4가지 치명적 결함을 도출했습니다.</p>
+                <div class="detail-list">
+                    <article>
+                        <h3>1. 스케일업(Scalability) 검증의 부재</h3>
+                        <p class="critical-text">"2.1인치는 장난감이다."</p>
+                        <p>차량용 디스플레이(CID/PID)의 표준은 최소 10~15인치입니다. 2.1인치 시제품 성공만으로는 <strong>"대면적 기판에서의 휨(Warpage)
+                                제어"</strong>나 <strong>"수백만 개 칩의 전사(Transfer) 균일도"</strong>를 전혀 증명하지 못합니다. 심사위원은 이 기술이 실제
+                            차량
+                            사이즈로 커졌을 때 픽셀 정렬이 틀어질 것이라고 판단했을 것입니다.</p>
+                    </article>
 
-            <div class="detail-list">
-                <article>
-                    <h3>1. 스케일업(Scalability) 검증의 부재</h3>
-                    <p class="critical-text">"2.1인치는 장난감이다."</p>
-                    <p>차량용 디스플레이(CID/PID)의 표준은 최소 10~15인치입니다. 2.1인치 시제품 성공만으로는 <strong>"대면적 기판에서의 휨(Warpage)
-                            제어"</strong>나 <strong>"수백만 개 칩의 전사(Transfer) 균일도"</strong>를 전혀 증명하지 못합니다. 심사위원은 이 기술이 실제 차량
-                        사이즈로 커졌을 때 픽셀 정렬이 틀어질 것이라고 판단했을 것입니다.</p>
-                </article>
+                    <article>
+                        <h3>2. 'Real Competitor' 회피</h3>
+                        <p class="critical-text">"철 지난 BOE LCD 논문만 때렸다."</p>
+                        <p>현재 시장의 최강자는 <strong>OLED 듀얼뷰</strong>입니다. 작년 논문은 백라이트가 필요한 LCD 기술의 한계(BOE)만 지적했습니다. 심사위원이 정말
+                            궁금해하는 <strong>OLED 대비 Micro-LED의 우위(번인, 고휘도 유지력)</strong>에 대한 직접적인 비교 데이터가 빠져 있어, 기술적
+                            시의성(Timeliness)이 떨어진다는 평가를 받았습니다.</p>
+                    </article>
 
-                <article>
-                    <h3>2. 'Real Competitor' 회피</h3>
-                    <p class="critical-text">"철 지난 BOE LCD 논문만 때렸다."</p>
-                    <p>현재 시장의 최강자는 <strong>OLED 듀얼뷰</strong>입니다. 작년 논문은 백라이트가 필요한 LCD 기술의 한계(BOE)만 지적했습니다. 심사위원이 정말
-                        궁금해하는 <strong>OLED 대비 Micro-LED의 우위(번인, 고휘도 유지력)</strong>에 대한 직접적인 비교 데이터가 빠져 있어, 기술적
-                        시의성(Timeliness)이 떨어진다는 평가를 받았습니다.</p>
-                </article>
+                    <article>
+                        <h3>3. 엔지니어링 데이터의 정합성 문제</h3>
+                        <p class="critical-text">"신뢰할 수 없는 데이터."</p>
+                        <p>Abstract에서는 <strong>1200 nits</strong>를 달성했다고 적었으나, 본문 3.2절 그래프에서는 <strong>~1000
+                                nits</strong>
+                            수준으로 표기되었습니다. 또한 광효율(Efficiency) 계산 시 배리어에 의한 손실률이 이론치와 실측치 간에 어떻게 매칭되는지 분석이 없었습니다. 이는 연구의
+                            완성도가
+                            덜 되었다는 인상을 줍니다.</p>
+                    </article>
 
-                <article>
-                    <h3>3. 엔지니어링 데이터의 정합성 문제</h3>
-                    <p class="critical-text">"신뢰할 수 없는 데이터."</p>
-                    <p>Abstract에서는 <strong>1200 nits</strong>를 달성했다고 적었으나, 본문 3.2절 그래프에서는 <strong>~1000 nits</strong>
-                        수준으로 표기되었습니다. 또한 광효율(Efficiency) 계산 시 배리어에 의한 손실률이 이론치와 실측치 간에 어떻게 매칭되는지 분석이 없었습니다. 이는 연구의 완성도가
-                        덜 되었다는 인상을 줍니다.</p>
-                </article>
-
-                <article>
-                    <h3>4. 'Automotive Grade' 검증 부족</h3>
-                    <p class="critical-text">"가혹 조건 테스트의 깊이 부족."</p>
-                    <p>차량용 디스플레이는 단순 구동이 아니라, <strong>1000시간 이상의 신뢰성</strong>을 요구합니다. 작년 논문의 '168시간 테스트'는 초기 불량 검출
-                        수준입니다. 특히 고온에서의 파장 변화(Color Shift)나 접합부 크랙 발생 여부 등 심층적인 파괴 분석 데이터가 전무했습니다.</p>
-                </article>
+                    <article>
+                        <h3>4. 'Automotive Grade' 검증 부족</h3>
+                        <p class="critical-text">"가혹 조건 테스트의 깊이 부족."</p>
+                        <p>차량용 디스플레이는 단순 구동이 아니라, <strong>1000시간 이상의 신뢰성</strong>을 요구합니다. 작년 논문의 '168시간 테스트'는 초기 불량 검출
+                            수준입니다. 특히 고온에서의 파장 변화(Color Shift)나 접합부 크랙 발생 여부 등 심층적인 파괴 분석 데이터가 전무했습니다.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
         <!-- Section 2: Winning Strategy -->
         <section id="strategy" class="card success-border">
-            <h2>🏆 2단계: 필승 전략 (Action Plan)</h2>
-            <p class="intro">올해는 단순한 '개발기'가 아닌, 산업계의 난제를 해결한 '솔루션'으로 접근합니다.</p>
-
-            <div class="strategy-list">
-                <div class="strategy-item">
-                    <div class="number">01</div>
-                    <div class="content">
-                        <h3>OLED의 '아킬레스건' 정밀 타격 (APL & Burn-in)</h3>
-                        <p><strong>공격 논리:</strong> OLED는 화면 전체가 밝아지면 소자 보호를 위해 강제로 밝기를 낮추는 <strong>ABL(Auto Brightness
-                                Limiter)</strong>이 작동합니다. 눈길 운전이나 흰색 배경의 지도 앱 사용 시 시인성이 급감합니다.</p>
-                        <ul class="sub-list">
-                            <li><strong>Action:</strong> APL(Average Picture Level) 변화에 따른 휘도 유지율 비교 그래프 삽입 (Micro-LED는
-                                100% 유지 vs OLED는 50% 급감).</li>
-                            <li><strong>Action:</strong> 고정된 UI(속도계 등)에서의 번인 가속 테스트 예상치 제시.</li>
-                        </ul>
+            <div class="collapsible-header" onclick="toggleSection('strategy')">
+                <h2>🏆 2단계: 필승 전략 (Action Plan)</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <p class="intro">올해는 단순한 '개발기'가 아닌, 산업계의 난제를 해결한 '솔루션'으로 접근합니다.</p>
+                <div class="strategy-list">
+                    <div class="strategy-item">
+                        <div class="number">01</div>
+                        <div class="content">
+                            <h3>OLED의 '아킬레스건' 정밀 타격 (APL & Burn-in)</h3>
+                            <p><strong>공격 논리:</strong> OLED는 화면 전체가 밝아지면 소자 보호를 위해 강제로 밝기를 낮추는 <strong>ABL(Auto
+                                    Brightness
+                                    Limiter)</strong>이 작동합니다. 눈길 운전이나 흰색 배경의 지도 앱 사용 시 시인성이 급감합니다.</p>
+                            <ul class="sub-list">
+                                <li><strong>Action:</strong> APL(Average Picture Level) 변화에 따른 휘도 유지율 비교 그래프 삽입
+                                    (Micro-LED는
+                                    100% 유지 vs OLED는 50% 급감).</li>
+                                <li><strong>Action:</strong> 고정된 UI(속도계 등)에서의 번인 가속 테스트 예상치 제시.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="strategy-item">
-                    <div class="number">02</div>
-                    <div class="content">
-                        <h3>85°C/85%RH: '죽음의 계곡' 생존 증명</h3>
-                        <p><strong>방어 논리:</strong> 유기물(Organic)인 OLED는 고온다습 환경에서 급격히 수명이 줄어듭니다. 반면 무기물(Inorganic)인 GaN
-                            Micro-LED는 변하지 않습니다.</p>
-                        <ul class="sub-list">
-                            <li><strong>Action:</strong> 85/85 챔버 테스트 시간을 작년 대비 2배 명시하거나, <strong>가속 수명 모델(Arrhenius
-                                    plot)</strong>을 적용하여 10년 수명을 예측한 데이터를 추가합니다.</li>
-                        </ul>
+                    <div class="strategy-item">
+                        <div class="number">02</div>
+                        <div class="content">
+                            <h3>85°C/85%RH: '죽음의 계곡' 생존 증명</h3>
+                            <p><strong>방어 논리:</strong> 유기물(Organic)인 OLED는 고온다습 환경에서 급격히 수명이 줄어듭니다. 반면 무기물(Inorganic)인
+                                GaN
+                                Micro-LED는 변하지 않습니다.</p>
+                            <ul class="sub-list">
+                                <li><strong>Action:</strong> 85/85 챔버 테스트 시간을 작년 대비 2배 명시하거나, <strong>가속 수명 모델(Arrhenius
+                                        plot)</strong>을 적용하여 10년 수명을 예측한 데이터를 추가합니다.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="strategy-item">
-                    <div class="number">03</div>
-                    <div class="content">
-                        <h3>'안전(Safety)'을 위한 Zero-Crosstalk 법규 대응</h3>
-                        <p><strong>가치 제안:</strong> 듀얼뷰의 크로스토크(화면 겹침)는 단순 화질 문제가 아니라, 운전자의 시선을 뺏는 <strong>치명적 안전 사고
-                                원인</strong>입니다.</p>
-                        <ul class="sub-list">
-                            <li><strong>Action:</strong> 유럽/북미의 차량 내 디스플레이 안전 규제(운전자 시야각 내 동영상 시청 금지 등)를 인용하며 당사의
-                                <strong>&lt;2% 크로스토크</strong> 기술이 이를 만족시키는 유일한 솔루션임을 강조합니다.
-                            </li>
-                        </ul>
+                    <div class="strategy-item">
+                        <div class="number">03</div>
+                        <div class="content">
+                            <h3>'안전(Safety)'을 위한 Zero-Crosstalk 법규 대응</h3>
+                            <p><strong>가치 제안:</strong> 듀얼뷰의 크로스토크(화면 겹침)는 단순 화질 문제가 아니라, 운전자의 시선을 뺏는 <strong>치명적 안전 사고
+                                    원인</strong>입니다.</p>
+                            <ul class="sub-list">
+                                <li><strong>Action:</strong> 유럽/북미의 차량 내 디스플레이 안전 규제(운전자 시야각 내 동영상 시청 금지 등)를 인용하며 당사의
+                                    <strong>&lt;2% 크로스토크</strong> 기술이 이를 만족시키는 유일한 솔루션임을 강조합니다.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="strategy-item">
-                    <div class="number">04</div>
-                    <div class="content">
-                        <h3>"작아도 괜찮아" 논리 (Scalability Logic)</h3>
-                        <p><strong>약점 보완:</strong> 2.1인치의 한계를 극복하기 위해 '타일링(Tiling)' 혹은 '전사 공정의 확장성'을 이론적으로 증명합니다.</p>
-                        <ul class="sub-list">
-                            <li><strong>Action:</strong> 우리가 사용한 전사 방식이 기판 사이즈에 독립적(Size-independent) 임을 보여주는 공정 모식도 추가.
-                            </li>
-                            <li><strong>Action:</strong> 대면적 시뮬레이션 데이터를 통해 12인치에서도 정렬 오차가 허용 범위(Tolerance) 내에 들어옴을 수치로
-                                제시.</li>
-                        </ul>
+                    <div class="strategy-item">
+                        <div class="number">04</div>
+                        <div class="content">
+                            <h3>"작아도 괜찮아" 논리 (Scalability Logic)</h3>
+                            <p><strong>약점 보완:</strong> 2.1인치의 한계를 극복하기 위해 '타일링(Tiling)' 혹은 '전사 공정의 확장성'을 이론적으로 증명합니다.
+                            </p>
+                            <ul class="sub-list">
+                                <li><strong>Action:</strong> 우리가 사용한 전사 방식이 기판 사이즈에 독립적(Size-independent) 임을 보여주는 공정 모식도
+                                    추가.
+                                </li>
+                                <li><strong>Action:</strong> 대면적 시뮬레이션 데이터를 통해 12인치에서도 정렬 오차가 허용 범위(Tolerance) 내에 들어옴을
+                                    수치로
+                                    제시.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="strategy-item">
-                    <div class="number">05</div>
-                    <div class="content">
-                        <h3>Top-tier 저널 스타일링 (High-Impact Formatting)</h3>
-                        <p><strong>권위(Authority) 확보:</strong> 내용이 좋아도 형식이 촌스러우면 떨어집니다. <strong>Nature
-                                Electronics</strong>나 <strong>SID Digest</strong> 상위 논문들의 작법을 벤치마킹하여 논문의 격(Class)을 높입니다.
-                        </p>
-                        <ul class="sub-list">
-                            <li><strong>Action (두괄식 구성):</strong> 지루한 서론을 줄이고, <strong>핵심 성과(수치)를 Abstract 첫
-                                    문장</strong>에 배치하여 심사위원의 시선을 초장에 사로잡습니다.</li>
-                            <li><strong>Action (Figures):</strong> PPT 그림판 그림 금지. 전문 툴(Blender 등)을 쓴 <strong>3D 렌더링급
-                                    모식도</strong>와 통일된 그래프 스타일(Arial/Helvetica 폰트)로 전문성을 극대화합니다.</li>
-                        </ul>
+                    <div class="strategy-item">
+                        <div class="number">05</div>
+                        <div class="content">
+                            <h3>Top-tier 저널 스타일링 (High-Impact Formatting)</h3>
+                            <p><strong>권위(Authority) 확보:</strong> 내용이 좋아도 형식이 촌스러우면 떨어집니다. <strong>Nature
+                                    Electronics</strong>나 <strong>SID Digest</strong> 상위 논문들의 작법을 벤치마킹하여 논문의 격(Class)을
+                                높입니다.
+                            </p>
+                            <ul class="sub-list">
+                                <li><strong>Action (두괄식 구성):</strong> 지루한 서론을 줄이고, <strong>핵심 성과(수치)를 Abstract 첫
+                                        문장</strong>에 배치하여 심사위원의 시선을 초장에 사로잡습니다.</li>
+                                <li><strong>Action (Figures):</strong> PPT 그림판 그림 금지. 전문 툴(Blender 등)을 쓴 <strong>3D 렌더링급
+                                        모식도</strong>와 통일된 그래프 스타일(Arial/Helvetica 폰트)로 전문성을 극대화합니다.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -365,79 +389,89 @@
 
         <!-- Section 3: Re-structured Outline -->
         <section id="outline" class="card warning-border">
-            <h2>📄 3단계: 논문 리빌딩 구조 (Hyper-Detailed Outline)</h2>
-            <p class="intro">단순 목차가 아닌, 각 문단(Paragraph)이 갖춰야 할 논리와 데이터를 사전에 정의합니다.</p>
-            <div class="outline-box">
-                <ul class="tree-list">
-                    <li>
-                        <span class="chapter">Title</span>
-                        <strong>Zero-Crosstalk, Burn-in Free Reference Display for Next-Gen Autonomous Cockpits</strong>
-                        <p class="desc">부제: A Scalable Micro-LED Approach for Dual-View HMI</p>
-                    </li>
-                    <li>
-                        <span class="chapter">1. Introduction (서론)</span>
-                        <ul>
-                            <li><strong>1.1 Motivation:</strong> 자율주행 L3+ 시대, 'Driver Safety'와 'Passenger
-                                Entertainment'의 공존 필요성 대두.</li>
-                            <li><strong>1.2 State-of-the-Art (Limitation):</strong>
-                                <ul>
-                                    <li><strong>OLED 한계:</strong> Organic 소재의 본질적 문제 (Burn-in, 고온 휘도 저하, ABL).</li>
-                                    <li><strong>LCD 한계:</strong> Barrier로 인한 심각한 휘도 손실 및 낮은 명암비(Contrast).</li>
-                                </ul>
-                            </li>
-                            <li><strong>1.3 Proposal:</strong> 무기물(Inorganic) Micro-LED를 이용한 'No-Compromise' 솔루션 제안.
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="chapter">2. Design & Simulation (설계 및 검증)</span>
-                        <ul>
-                            <li><strong>2.1 Optical Architecture:</strong>
-                                <ul>
-                                    <li><strong>Ray-Tracing:</strong> Barrier 높이/너비 변수에 따른 Crosstalk 민감도 시뮬레이션.</li>
-                                    <li><strong>Sweet Spot:</strong> 공정 오차(Margin)를 흡수하는 최적의 설계값(Offset) 도출 과정.</li>
-                                </ul>
-                            </li>
-                            <li><strong>2.2 Scalable Fabrication (양산성 논리):</strong>
-                                <ul>
-                                    <li><strong>Mass Transfer:</strong> 기판 크기에 독립적인(Size-independent) 스탬프 전사 공정.</li>
-                                    <li><strong>Warpage Control:</strong> 대면적(12인치+) 글래스 공정 시 평탄도 확보 방안 제시.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="chapter">3. Experimental Results (핵심 결과)</span>
-                        <ul>
-                            <li><strong>3.1 Optical Performance (압도적 화질):</strong>
-                                <ul>
-                                    <li><strong>Peak Luminance:</strong> 1200+ nits (백색 화면 100%에서도 휘도 저하 없음).</li>
-                                    <li><strong>Crosstalk:</strong> &lt; 1.8% (운전자 시야각 내 동영상 완벽 차단).</li>
-                                </ul>
-                            </li>
-                            <li><strong>3.2 Environmental Reliability (결정적 우위):</strong>
-                                <ul>
-                                    <li><strong>Thermal Shock:</strong> -40℃ ↔ 85℃ 500 Cycle 후 Dead Pixel 0%.</li>
-                                    <li><strong>High Temp/Humid (85/85):</strong> 색좌표 변화(△u'v') &lt; 0.005 (육안 식별 불가).
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="chapter">4. Discussion (고찰)</span>
-                        <ul>
-                            <li><strong>4.1 Comparative Analysis:</strong> 경쟁 기술(WOLED, IPS-LCD) 대비 우위 비교표(Performance
-                                Matrix).</li>
-                            <li><strong>4.2 Regulatory Compliance:</strong> Euro NCAP 등 국제 안전 규제(Driver Distraction) 만족
-                                여부.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="chapter">5. Conclusion (결론)</span>
-                        <p class="desc">"Micro-LED만이 미래 모빌리티 듀얼뷰 디스플레이의 유일한 대안(Reference)이다."</p>
-                    </li>
-                </ul>
+            <div class="collapsible-header" onclick="toggleSection('outline')">
+                <h2>📄 3단계: 논문 리빌딩 구조 (Hyper-Detailed Outline)</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <p class="intro">단순 목차가 아닌, 각 문단(Paragraph)이 갖춰야 할 논리와 데이터를 사전에 정의합니다.</p>
+                <div class="outline-box">
+                    <ul class="tree-list">
+                        <li>
+                            <span class="chapter">Title</span>
+                            <strong>Zero-Crosstalk, Burn-in Free Reference Display for Next-Gen Autonomous
+                                Cockpits</strong>
+                            <p class="desc">부제: A Scalable Micro-LED Approach for Dual-View HMI</p>
+                        </li>
+                        <li>
+                            <span class="chapter">1. Introduction (서론)</span>
+                            <ul>
+                                <li><strong>1.1 Motivation:</strong> 자율주행 L3+ 시대, 'Driver Safety'와 'Passenger
+                                    Entertainment'의 공존 필요성 대두.</li>
+                                <li><strong>1.2 State-of-the-Art (Limitation):</strong>
+                                    <ul>
+                                        <li><strong>OLED 한계:</strong> Organic 소재의 본질적 문제 (Burn-in, 고온 휘도 저하, ABL).</li>
+                                        <li><strong>LCD 한계:</strong> Barrier로 인한 심각한 휘도 손실 및 낮은 명암비(Contrast).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>1.3 Proposal:</strong> 무기물(Inorganic) Micro-LED를 이용한 'No-Compromise' 솔루션 제안.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="chapter">2. Design & Simulation (설계 및 검증)</span>
+                            <ul>
+                                <li><strong>2.1 Optical Architecture:</strong>
+                                    <ul>
+                                        <li><strong>Ray-Tracing:</strong> Barrier 높이/너비 변수에 따른 Crosstalk 민감도 시뮬레이션.</li>
+                                        <li><strong>Sweet Spot:</strong> 공정 오차(Margin)를 흡수하는 최적의 설계값(Offset) 도출 과정.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>2.2 Scalable Fabrication (양산성 논리):</strong>
+                                    <ul>
+                                        <li><strong>Mass Transfer:</strong> 기판 크기에 독립적인(Size-independent) 스탬프 전사 공정.
+                                        </li>
+                                        <li><strong>Warpage Control:</strong> 대면적(12인치+) 글래스 공정 시 평탄도 확보 방안 제시.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="chapter">3. Experimental Results (핵심 결과)</span>
+                            <ul>
+                                <li><strong>3.1 Optical Performance (압도적 화질):</strong>
+                                    <ul>
+                                        <li><strong>Peak Luminance:</strong> 1200+ nits (백색 화면 100%에서도 휘도 저하 없음).</li>
+                                        <li><strong>Crosstalk:</strong> &lt; 1.8% (운전자 시야각 내 동영상 완벽 차단).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>3.2 Environmental Reliability (결정적 우위):</strong>
+                                    <ul>
+                                        <li><strong>Thermal Shock:</strong> -40℃ ↔ 85℃ 500 Cycle 후 Dead Pixel 0%.</li>
+                                        <li><strong>High Temp/Humid (85/85):</strong> 색좌표 변화(△u'v') &lt; 0.005 (육안 식별
+                                            불가).
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="chapter">4. Discussion (고찰)</span>
+                            <ul>
+                                <li><strong>4.1 Comparative Analysis:</strong> 경쟁 기술(WOLED, IPS-LCD) 대비 우위
+                                    비교표(Performance
+                                    Matrix).</li>
+                                <li><strong>4.2 Regulatory Compliance:</strong> Euro NCAP 등 국제 안전 규제(Driver Distraction)
+                                    만족
+                                    여부.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="chapter">5. Conclusion (결론)</span>
+                            <p class="desc">"Micro-LED만이 미래 모빌리티 듀얼뷰 디스플레이의 유일한 대안(Reference)이다."</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -468,6 +502,21 @@
         function checkEnter(event) {
             if (event.key === 'Enter') {
                 checkPassword();
+            }
+        }
+
+        // Toggle Section Logic
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const content = section.querySelector('.collapsible-content');
+            const header = section.querySelector('.collapsible-header');
+
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                header.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                header.classList.add('active');
             }
         }
 
