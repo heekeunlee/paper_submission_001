@@ -38,9 +38,9 @@
 
     <main class="container">
 
-        <!-- New Section: Draft Preview -->
-        <section id="preview" class="card">
-            <h2>📝 2026 리빌딩 원고 미리보기 (Annotated Preview)</h2>
+        <!-- New Section: Draft Preview (Korean) -->
+        <section id="preview-ko" class="card">
+            <h2>📝 [Part A] 2026 리빌딩 원고 (국문/Korean)</h2>
             <p class="intro">수정된 전략이 실제 원고에 어떻게 반영되었는지 확인하세요. <span class="highlight-demo">형광펜</span> 부분에 마우스를 올리면 주석이
                 보입니다.</p>
 
@@ -134,6 +134,136 @@
                         <h3>Project Resources</h3>
                         <p><strong>Live Demo:</strong> <a href="https://heekeunlee.github.io/paper_submission_001"
                                 target="_blank">https://heekeunlee.github.io/paper_submission_001</a></p>
+            </div>
+        </section>
+
+        <!-- New Section: Draft Preview (English) -->
+        <section id="preview-en" class="card">
+            <h2>📝 [Part B] 2026 Paper Draft (English/영문)</h2>
+            <p class="intro">영문 원고에도 동일한 전략이 적용되었습니다.</p>
+
+            <div class="paper-preview">
+                <h3>Abstract</h3>
+                <p>
+                    <span class="highlight"
+                        data-note="Strategy #5: Impactful Opening. Emphasize key specs (1200 nits, <1.8% CT) in the very first sentence.">This
+                        paper presents a high-brightness (1200 nits), low-crosstalk (<1.8%) dual-view display based on
+                            Micro-LED technology, redefining safety and durability standards for automotive
+                            applications.</span>
+                            <span class="highlight"
+                                data-note="Strategy #1: Attack OLED Weaknesses. Explicitly mention luminance degradation and burn-in issues in harsh environments.">Conventional
+                                OLED-based dual-view technologies have shown critical safety limitations due to
+                                luminance degradation under harsh environments (85℃) and burn-in issues caused by static
+                                user interfaces.</span>
+                </p>
+                <p>
+                    We overcame these limitations through a proprietary pixel partitioning architecture and a <span
+                        class="highlight"
+                        data-note="Strategy #4: Emphasize Scalability. 'Size-independent' logic to counter 'small size' criticism.">size-independent
+                        stamp transfer process capable of large-area scalability.</span>
+                    The fabricated prototype demonstrated <span class="highlight"
+                        data-note="Strategy #2: The 'Killer' Reliability Data. 0% degradation under torture tests (-40~85C, 85/85).">superior
+                        reliability with zero luminance degradation under thermal shock cycling (-40℃ to 85℃) and
+                        high-temperature/high-humidity (85℃/85%RH) conditions.</span>
+                    These results suggest that the proposed Micro-LED display is the only viable reference that <span
+                        class="highlight"
+                        data-note="Strategy #3: Framed as 'Regulatory Compliance' (Euro NCAP) rather than just a spec.">fully
+                        complies with strict driver distraction regulations such as Euro NCAP while guaranteeing
+                        consistent visibility under any environmental condition.</span>
+                </p>
+
+                <h3>1. Introduction</h3>
+                <h4>1.1 The Shift to "Third Living Space"</h4>
+                <p>As autonomous driving technology advances from Level 3 to Level 4, the automotive cockpit is
+                    undergoing a paradigm shift from a mere mode of transport to a "Third Living Space." As drivers gain
+                    more freedom from vehicle control, there is an essential requirement for **Dual-View** display
+                    technology capable of simultaneously providing safety information (Speed, Navigation, Warnings) to
+                    the driver (FID) and immersive entertainment content to the passenger (PID). This goes beyond mere
+                    convenience; it is becoming a critical safety requirement to ensure that content with different
+                    purposes does not visually interfere with one another.</p>
+
+                <h4>1.2 Limitations of Conventional Technologies</h4>
+                <p>However, commercially available technologies fail to meet the stringent safety and reliability
+                    standards required for automotive displays. Conventional LCDs utilizing parallax barriers suffer
+                    from significant optical loss and low contrast ratios. OLED-based dual-view technologies, recently
+                    gaining attention, possess critical weaknesses for automotive use. <span class="highlight"
+                        data-note="Strategy #1: Attack OLED. Burn-in is inevitable for static UIs (speedometers).">First,
+                        due to the inherent nature of organic materials, <strong>burn-in</strong> is inevitable when
+                        static UIs are displayed for extended periods. Pixel shift techniques offer only a temporary
+                        mitigation.</span> <span class="highlight"
+                        data-note="Strategy #1: Fear Appeal regarding ABL. Sudden dimming on snowy roads creates safety hazards.">Second,
+                        the <strong>Auto Brightness Limiter (ABL)</strong>, which forcibly reduces brightness to manage
+                        heat, reacts unexpectedly in bright environments, potentially leading to serious driver
+                        visibility issues.</span></p>
+
+                <h4>1.3 The Micro-LED Solution</h4>
+                <p>To fundamentally resolve these dilemmas, we propose an inorganic **Micro-LED Dual-View Display**.
+                    <span class="highlight"
+                        data-note="Strategy #2: Inorganic dominance. 1200 nits 'Real Brightness' without ABL.">Inorganic
+                        GaN-based emitters maintain ultra-high brightness (>1200 nits) without the risks of burn-in or
+                        degradation.</span> In this study, we utilize a proprietary Pixel Partitioning architecture and
+                    a scalable stamp transfer process to present a new reference for next-generation cockpit displays.
+                </p>
+
+                <h3>2. Design & Fabrication</h3>
+                <h4>2.1 Optical Architecture & Simulation Methodology</h4>
+                <p>The core challenge in dual-view display design is resolving the trade-off between maximizing View
+                    Angle and minimizing Crosstalk. We conducted Monte-Carlo Ray-Tracing simulations using LightTools
+                    software to derive the optimal design. <span class="highlight"
+                        data-note="Strategy #5: Show off Engineering Depth. List specific micron-level tolerance offsets.">Our
+                        simulation results identified a process 'Sweet Spot' where crosstalk remains under 2% when the
+                        first black matrix (BM1) is offset by <strong>+8 μm</strong>, the organic coating (OC) is 6 μm,
+                        and the second black matrix (BM2) is offset by <strong>+3.5 μm</strong>.</span></p>
+
+                <h4>2.2 Scalable Fabrication: Overcoming the Size Barrier</h4>
+                <p>While previous studies were limited to small prototypes, this study prioritizes **Scalability**. We
+                    employed a size-independent stamp transfer process that solves the "seam line" issues of tiling.
+                    Furthermore, to address substrate warpage during large-area processing, we introduced a **Vacuum
+                    Chuck with Local Flatness Control**. <span class="highlight"
+                        data-note="Strategy #4: Pre-empt 'Toy' criticism. Prove precision (±3μm) on 12.3-inch scale.">Through
+                        this, we successfully controlled transfer position precision to within <strong>±3 μm</strong>
+                        even on a 12.3-inch area, proving that uniform image quality can be achieved in large-area
+                        displays.</span></p>
+
+                <h3>3. Experimental Results</h3>
+                <h4>3.1 Optical Performance: Exceeding Automotive Standards</h4>
+                <p>The fabricated 2.1-inch prototype achieved a peak luminance of <strong>1208 nits</strong>. <span
+                        class="highlight"
+                        data-note="Strategy #1: Direct Comparison. Micro-LED (1200) vs OLED with ABL (<600). EV Power Efficiency added.">This
+                        is more than double the brightness of modern automotive OLEDs, which plummet to below 600 nits
+                        due to ABL, while reducing power consumption by over 40% compared to LCDs.</span> Crosstalk was
+                    measured at <strong>less than 1.8%</strong>, achieving a 'Ghost-free' state imperceptible to the
+                    driver.</p>
+
+                <h4>3.2 Environmental Reliability: The "Killer App" Feature</h4>
+                <p><span class="highlight" data-note="Strategy #2: The Ultimate Weapon. 'Torture Test' survival.">We
+                        conducted **Torture Tests** (Thermal Shock -40~85℃) resulting in a <strong>0%</strong> dead
+                        pixel rate.</span> Under 85℃/85%RH conditions for 168 hours, luminance degradation was <2% and
+                        color shift <0.005. <span class="highlight"
+                        data-note="Strategy #1: Contrast with OLED failure. 22% drop and yellow shift vs Stable Micro-LED.">
+                        In contrast, an automotive OLED panel exhibited a <strong>22% luminance drop</strong> and severe
+                        yellowish color shift under identical conditions.</span> This suggests Micro-LED is the *only*
+                        solution for high-temp/high-humidity vehicle environments.</p>
+
+                <h3>4. Discussion</h3>
+                <h4>4.1 Comparison with State-of-the-Art</h4>
+                <p>Compared to the latest OLED-based technologies (e.g., BOE), Micro-LED demonstrates overwhelming
+                    superiority in <strong>'Consistency.'</strong> Unlike OLEDs which dim based on content (APL),
+                    Micro-LEDs maintain constant high brightness, a key safety factor for snowy/bright roads.
+                    Additionally, high transfer yields (>99.99%) are paving the way for cost competitiveness.</p>
+
+                <h4>4.2 Regulatory Compliance & Safety</h4>
+                <p>Euro NCAP strongly recommends preventing Driver Distraction. <span class="highlight"
+                        data-note="Strategy #3: Framed as Law Compliance. <1.8% CT meets regulations proactively without physical films.">The
+                        sub-1.8% crosstalk performance implies that the display itself proactively and perfectly meets
+                        safety regulations through its optical design alone, without additional physical
+                        barriers.</span></p>
+
+                <h3>5. Conclusion</h3>
+                <p>This study demonstrated a Micro-LED dual-view display with high brightness (1200 nits), ultra-low
+                    crosstalk (<2%), and automotive-grade reliability. We simultaneously solved the fatal weaknesses of
+                        OLEDs—burn-in, high-temperature reliability, and scalability. We are confident this technology
+                        will become an essential platform for the autonomous driving era.</p>
             </div>
         </section>
 
