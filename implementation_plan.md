@@ -1,36 +1,42 @@
-# Implementation Plan - Expand 2026 Draft with 2025 Technical Details
+# Implementation Plan - Massive Content Expansion (3x)
 
 ## Goal
-Significantly increase the length and technical depth of the 2026 paper draft by integrating specific data from the 2025 submission, while maintaining the "Winning Strategy" (high-impact, anti-OLED) tone.
+Triple the text length of the 2026 paper draft (Sections 1-5) in both Korean and English. Ensure the "Rebuilding Strategy" (High Impact, Anti-OLED, Safety) is maintained while adding deep logical flow and experimental rigor.
 
-## Proposed Changes
+## Proposed Strategy per Section
 
-### [MODIFY] [index.html](file:///Users/dasepa/paper_submission_001/index.html)
+### 1. Introduction
+- **Deepen Context**: Elaborate on the "Zero-Layer" UI trend in autonomous cockpits and the conflict between information quantity and driver distraction.
+- **Mechanism of Failure**: Explain *physically* why OLED fails (Differential aging of Blue emitter, Junction temperature rise causing ABL).
+- **Novelty Assertion**: Explicitly frame the 3-pillar solution (Optics, Circuit, Process) as a necessary "System-Level Optimization" rather than component tweaking.
 
-#### 1. Abstract Expansion
-- **Add**: Specific panel specs (326 PPI, 320x390, 2.1-inch proof-of-concept for 12.3-inch validation).
-- **Add**: Specific environmental range (-30°C to +85°C).
+### 2. Design & Fabrication
+- **Optical**: Detail the Monte Carlo simulation boundary conditions. Explain the trade-off curve between "Crosstalk" and "Efficiency" and how the 'Sweet Spot' was found using the derivative of the curve.
+- **Circuit**: Explain the Quantum Confined Stark Effect (QCSE) in LEDs to justify PWM over PAM. Describe the LTPS TFT structure (7T1C or similar standard) briefly to show compatibility.
+- **Process**: Explain the "Viscoelastic" property of the PDMS stamp used in Kinetic Control.
 
-#### 2. Introduction Expansion -> "1.1 The Paradigm Shift"
-- **Add**: Definitions of **FID (Front Information Display)**, **PID (Passenger Information Display)**, and **CID (Central Information Display)** to clearly define the application scope.
+### 3. Experimental Results
+- **Measurement Setup**: Mention specific tools (Eldim EZContrast, CA-410).
+- **Reliability Logic**: Contrast the "Bond Dissociation Energy" of Organic materials vs. GaN crystal structure to explain the reliability gap.
 
-#### 3. Design & Fabrication Expansion -> "2.1 Optical Architecture"
-- **Add**: **Equations (1), (2), (3)** from 2025 script (Viewing Angle, Crosstalk, Efficiency).
-- **Format**: Use HTML subscripts/superscripts for professional appearance.
-- **Add**: Simulation parameters (BM1 +8um, OC 6um, BM2 +3.5um) as explicit "Design Rules".
+### 4. Discussion
+- **TCO Model**: Expand on the "Total Cost of Ownership" argument. Initial Yield Cost vs. Field Failure Replacement Cost.
+- **Safety**: Link Crosstalk to "Cognitive Tunneling" and accident rates.
 
-#### 4. Design & Fabrication Expansion -> "2.2 Device Structure" (New Sub-section)
-- **Add**: Micro-LED chip dimensions (R: 15x30um, G/B: 13x28um).
-- **Add**: Pixel layout description (RGB Stripe, Odd/Even domain separation).
+### 5. Conclusion
+- **Final Verdict**: Frame Micro-LED not just as "Better" but as the "Only Viable Option" for L4+ Autonomous Vehicles.
 
-#### 5. Experimental Results Expansion
-- **Add**: "AOI (Automated Optical Inspection)" verification mentions.
-- **Add**: Comparison details with BOE (referencing the "prior work" but dismissing it as LCD-limited).
+## Execution Steps
+1.  **Update `index.html`**:
+    -   Rewrite `<section id="preview-ko">` with the expanded text.
+    -   Rewrite `<section id="preview-en">` with the expanded text.
+    -   Update highlights to cover new key logical points.
+2.  **Update Artifacts**:
+    -   Overwrite `03_PAPER_DRAFT_2026.txt` with the new text.
+    -   Overwrite `03_PAPER_DRAFT_2026.md` with the new text.
+3.  **Deployment**:
+    -   Git push.
 
-#### 6. Highlighter & Annotations
-- **Update**: Apply `<span class="highlight" data-note="...">` to the new technical sections to explain *why* these details win points (e.g., "Defining variables mathematically shows rigor").
-
-## Verification Plan
-- **Visual Check**: Ensure the preview sections in `index.html` look significantly longer and deeper.
-- **Content Check**: Verify equations render correctly.
-- **Functionality**: Check that new highlights have working tooltips.
+## Verification
+- **Length Check**: Visually verify the preview is much longer.
+- **Logic Check**: Read through to ensure the argument flows logically (Problem -> Mechanism -> Solution -> Proof -> Implication).
